@@ -17,5 +17,5 @@ function getNumber() {
 //once player gets either correct number or does not, a win or loss message should be displayed
 
 $(document).ready(function(){
-    $(":button").css();
+    $(":button");
   });

@@ -1,21 +1,29 @@
 var Wins = 0;
 var Losses = 0;
-var Total = 0;
-var RandomStartNum = [];
-var HiddenValueNum = [];
-//you will need a var for crystal worth (maybe one var for all or one var per goal number)
-//generate a random number at start of game
-function startGame() {
+var Total ;
+var RandomStartNum ;
 
-}
-//set a hidden number value to each crystal
-function getNumber() {
+RandomStartNum = Math.floor(Math.random() * 99 ) + 20;
+console.log(RandomStartNum);
 
-}
-//on click of crystal add hidden number value to total score area
-//when a new crystal is clicked and there is a value present in score section, values will need to be added together and displayed
-//once player gets either correct number or does not, a win or loss message should be displayed
+$("#randomNumber").html('Get this number: ' + RandomStartNum);
 
-$(document).ready(function(){
-    $(":button");
-  });
+for (var i=0; i < 4; i ++){
+    var random = Math.floor(Math.random() * 12) +1;
+    console.log(random);
+
+    console.log(RandomStartNum + "#crystals")
+    var crystal = $("<div>");
+    crystal.attr({
+    "class":'crystal',
+    "data-random": random
+});
+//this is supposed to connect crystal value to total score but is not working
+$("#crystal1").on("click", function(){
+
+    $("#total").html(random);
+});
+
+//i need to add a function so that the crystal values are added together on each click to display new total
+
+//wins and losses need to be updated, you can probably create a function and use else and if else

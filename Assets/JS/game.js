@@ -18,6 +18,7 @@ for (var i=0; i < 4; i ++){
     "class":'crystal',
     "data-random": random
 });
+};
 //this is supposed to connect crystal value to total score but is not working
 $("#crystal1").on("click", function(){
 
